@@ -1,0 +1,11 @@
+.main-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background: url("../images/banner-image.jpg") no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 698px) {
+        padding-top: 204px;
+        padding-bottom: 202px;    
+    }
+}
