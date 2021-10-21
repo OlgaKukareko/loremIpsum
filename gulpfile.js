@@ -2,16 +2,9 @@
 /*
 1. npm install gulp-cli -g
 2. npm install -D gulp node-sass gulp-sass gulp-sourcemaps gulp-autoprefixer gulp-concat browser-sync 
-3. Положить gulpfile.js из чата Stormnet frontend в корень проекта
-4. Отредактировать пути в gulpfile.js (path_to_main_scss_file, scss_path_to_watch, final_css_name)
-5. Изменить в вашем index.html путь до подключаемого css (теперь он лежит в папке dist/style.css)
 После всех шагов пишем в консоль команду gulp
 - все scss файлы проимпортированные в главном scss файле превратятся в css и положится в папку dist
 - стартует локальный сервер и открывается браузер с url http://localhost:3000/
-- ваша вёрстка теперь доступна по данному url и обновляется при любых изменениях html, и !!!любой из зависимостей вашего главного scss файла
-- просто сворачиваем запущенную консоль - и продолжаем работать. 
-  gulp за всем следит и пересобирает ваш scss + обновляет за вас браузер (ура! рутина автоматизирована)
-не забудьте удалить оба плагина для vscode - они больше не нужны + vscode будет загружаться чуть быстрее (т.к. ему не надо инитить свои плагины)
 */
 
 const path_to_main_scss_file = 'assets/scss/style.scss';
