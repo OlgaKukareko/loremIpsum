@@ -1,0 +1,19 @@
+.header {
+    padding: 34px 0;
+    background: rgba(16, 16, 29, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    &__logo {
+        font-family: 'Raleway';
+        font-size: 28px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+}
