@@ -54,6 +54,73 @@
                     </div>
                 </div>
             </section>
+            <section class="order-placement">
+                <div class="order-placement__content content">
+                    <div class="order-placement__heading">
+                        <h2 class="order-placement__title checkout__title">Оформление
+                            <span class="color-primary">Заказа</span>
+                        </h2>
+                        <p class="order-placement__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+                    </div>
+                    <div class="order-placement__steps steps">
+                        <div class="order-placement__step step">
+                            <span class="order-placement__icon step__icon search"></span>
+                            <p class="step__text">Lorem ipsum dolorsit amet</p>
+                        </div>
+                        <div class="order-placement__step step">
+                            <span class="order-placement__icon step__icon percent"></span>
+                            <p class="step__text">Сonsecteturadipiscing elit</p>
+                        </div>
+                        <div class="order-placement__step step">
+                            <span class="order-placement__icon step__icon add-files"></span>
+                            <p class="step__text">Sed do eiusmod tempor</p>
+                        </div>
+                        <div class="order-placement__step step">
+                            <span class="order-placement__icon step__icon envelope"></span>
+                            <p class="step__text">Esse cillum dolore eu fugiat</p>
+                        </div>
+                        <div class="order-placement__step step">
+                            <span class="order-placement__icon step__icon money"></span>
+                            <p class="step__text">Excepteur sint occaecat cupidatat non proident</p>
+                        </div>
+                    </div>
+                    <form class="order-placement__form form" action="./form.php" method="get">
+                        <fieldset class="form__row">
+                            <select class="choose-type form__item" name="choose-type" id="choose-type">
+                                <option value="0">Выберите тип системы</option>
+                                <option value="1">Sed ut perspiciatis</option>
+                                <option value="2">Nemo enim ipsam</option>
+                                <option value="3">Et harum quidem</option>
+                                <option value="4">Temporibus autem</option>
+                                <option value="5">Itaque earum rerum</option>
+                                <option value="6">Sed ut perspiciatis</option>
+                                <option value="7">Nemo enim ipsam</option>
+                                <option value="8">Et harum quidem</option>
+                                <option value="9">Temporibus autem</option>
+                                <option value="10">Itaque earum rerum</option>
+                            </select>
+                            <input type="email" class="form__item" name="email" id="email" placeholder="Ваш e-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <input type="text" class="form__item" name="name" placeholder="Ваше имя" required>
+                        </fieldset>
+                        <fieldset class="form__row">
+                            <div class="form__item percents">
+                                <div class="percents__heading">
+                                    <span class="percents__heading-text">Sed ut perspiciatis, unde omnis iste natus</span>
+                                    <output class="percents__value" id="percents__value"></output>
+                                </div>
+                                <input class="percents__input" value="75" min="0" max="100" step="1" type="range" name="percents" id="percents">
+                            </div>
+                            <div class="form__item choose-file">
+                                <label class="choose-file__label" for="choose-file">Прикрепить файл</label>
+                                <input class="choose-file__input" type="file" name="choose-file" id="choose-file">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form__row">
+                            <input class="form__item form__submit btn btn-primary" name="submit" type="submit" value="Отправить">
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
         </main>
         <footer></footer>
     </body>
