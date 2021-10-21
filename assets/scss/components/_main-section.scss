@@ -18,8 +18,19 @@
         margin-top: 0;
         margin-bottom: 40px;
     }
-    
-    @media screen and (min-width: 698px) {
+
+    &__text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: $color-black;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 648px) {
         padding-top: 204px;
         padding-bottom: 202px;    
 
@@ -27,6 +38,11 @@
             font-size: 48px;
             line-height: 58px;
             margin-bottom: 88px;    
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 }
