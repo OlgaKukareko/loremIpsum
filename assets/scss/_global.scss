@@ -1,0 +1,50 @@
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1130px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.color-primary {
+    color: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    @include btn;
+}
+
+.btn-primary {
+    background: $color-primary;
+    border: 1px solid $color-white;
+    color: $color-white;
+}
+
+.btn-secondary {
+    background: $color-white;
+    border: 1px solid #6F6D7B;
+    color: $color-dark;
+}
