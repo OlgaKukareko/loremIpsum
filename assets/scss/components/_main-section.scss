@@ -4,8 +4,29 @@
     background: url("../images/banner-image.jpg") no-repeat;
     background-size: cover;
 
+    &__wrapper {
+        max-width: 780px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    
     @media screen and (min-width: 698px) {
         padding-top: 204px;
         padding-bottom: 202px;    
+
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 88px;    
+        }
     }
 }
