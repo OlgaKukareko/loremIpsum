@@ -54,6 +54,23 @@
         }
     }
 
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        padding: 12px 32px;
+        min-width: 184px;
+        height: 43px;
+        max-width: fit-content;
+        margin-bottom: 16px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
     @media screen and (min-width: 648px) {
         padding-top: 204px;
         padding-bottom: 202px;    
