@@ -21,13 +21,37 @@
 
     &__text {
         font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 22px;
         display: flex;
         align-items: center;
         color: $color-black;
         margin-top: 0;
         margin-bottom: 10px;
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: baseline;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-black;
+        margin-bottom: 6px;
+
+        &::before {
+            content: "-";
+            display: block;
+            color: $color-black;
+            padding: 0 10px 0 8px;
+            margin-top: -4px;
+        }
     }
 
     @media screen and (min-width: 648px) {
@@ -41,6 +65,13 @@
         }
 
         &__text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__list {
+            margin-bottom: 80px;
+        }
+        &__item {
             font-size: 20px;
             line-height: 24px;
         }
