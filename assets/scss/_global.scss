@@ -41,10 +41,27 @@ a {
     background: $color-primary;
     border: 1px solid $color-white;
     color: $color-white;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-white;
+        border-color: $color-primary;
+        color: $color-primary;
+        transition: all 0.2s linear;
+    }
 }
 
 .btn-secondary {
     background: $color-white;
     border: 1px solid $color-border-gray;
     color: $color-dark;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+        transition: all 0.2s linear;
+    }
 }
