@@ -2,6 +2,11 @@ body {
     font-family: 'Lato';
     font-style: normal;
     margin: 0;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 0;
+    }
 }
 
 html,
@@ -65,14 +70,4 @@ a {
         color: $color-primary;
         transition: all 0.2s linear;
     }
-}
-
-::-webkit-scrollbar {
-    background: $color-gray;
-    border-radius: 3px;
-    width: 7px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: $color-primary;
-    border-radius: 3px;
 }

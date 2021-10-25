@@ -228,6 +228,16 @@
                         .selectric-scroll {
                             scrollbar-width: thin;
                             scrollbar-color: $color-primary $color-gray;  
+
+                            &::-webkit-scrollbar {
+                                background: $color-gray;
+                                border-radius: 3px;
+                                width: 7px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background-color: $color-primary;
+                                border-radius: 3px;
+                            }
                         }
                     }
                 }
