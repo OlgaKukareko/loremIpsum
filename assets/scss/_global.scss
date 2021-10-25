@@ -1,0 +1,73 @@
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    margin: 0;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 0;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1212px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.color-primary {
+    color: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    @include btn;
+}
+
+.btn-primary {
+    background: $color-primary;
+    border: 1px solid $color-white;
+    color: $color-white;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-white;
+        border-color: $color-primary;
+        color: $color-primary;
+        transition: all 0.2s linear;
+    }
+}
+
+.btn-secondary {
+    background: $color-white;
+    border: 1px solid $color-border-gray;
+    color: $color-dark;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+        transition: all 0.2s linear;
+    }
+}

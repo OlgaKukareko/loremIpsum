@@ -1,0 +1,45 @@
+@mixin btn {
+    border-radius: 4px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes bigsteps {
+    0% {
+        box-shadow: 0px 0px 10px 9px rgba(62, 156, 220, 0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 9px rgba(62, 156, 220, 0.2);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 9px rgba(62, 156, 220, 0.4);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 9px rgba(62, 156, 220, 0.2);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 9px rgba(62, 156, 220, 0);
+    }
+}
+
+@keyframes steps {
+    0% {
+        background-color: $color-dots;
+    }
+
+    50% {
+        background-color: $color-primary;
+    }
+
+    100% {
+        background-color: $color-dots;
+    }
+}
