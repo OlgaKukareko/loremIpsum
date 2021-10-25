@@ -225,6 +225,10 @@
                                 color: $color-primary;
                             }
                         }
+                        .selectric-scroll {
+                            scrollbar-width: thin;
+                            scrollbar-color: $color-primary $color-gray;  
+                        }
                     }
                 }
             }
@@ -286,6 +290,7 @@
                     &__heading {
                         display: flex;
                         justify-content: space-between;
+                        align-items: baseline;
                         flex-wrap: wrap;
                         font-size: 18px;
                         line-height: 22px;
@@ -424,7 +429,9 @@
             line-height: 19px;
             margin: 0 -12px 88px;
 
+
             .step {
+                padding: 0 15px;
                 &__circles {
                     flex-direction: row;
                     top: 50px;
