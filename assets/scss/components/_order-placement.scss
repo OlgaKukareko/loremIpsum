@@ -163,7 +163,7 @@
     &__form {
         .selectric {
             background: rgba(255, 255, 255, 0.85);
-            border: 1px solid #FFFFFF;
+            border: 1px solid $color-white;
             box-sizing: border-box;
             border-radius: 3px;
 
@@ -174,7 +174,7 @@
                 font-size: 18px;
                 line-height: 48px;
                 height: 48px;
-                color: #272733;
+                color: $color-text-input;
             }
 
             .button {
@@ -186,8 +186,8 @@
                     width: 4px;
                     height: 4px;
                     border-top: none;
-                    border-right: 1px solid #000000;
-                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid $color-black;
+                    border-bottom: 1px solid $color-black;
                     border-left: none;
                     transform: rotate(45deg);
                 }
@@ -199,13 +199,13 @@
                     border-radius: 3px 3px 0px 0px;
 
                     .label {
-                        color: #fff;
+                        color: $color-white;
                     }
 
                     .button {
                         &:after {
-                            border-right: 1px solid #fff;
-                            border-bottom: 1px solid #fff;
+                            border-right: 1px solid $color-white;
+                            border-bottom: 1px solid $color-white;
                             transform: rotate(225deg);
                         }
                     }
@@ -217,7 +217,7 @@
                         border-radius: 3px;
 
                         li {
-                            color: #fff;
+                            color: $color-white;
 
                             &:hover,
                             &.selected {
@@ -229,10 +229,9 @@
                 }
             }
         }
-
         input:not([type="submit"]):not([type="range"]) {
             background: rgba(255, 255, 255, 0.85);
-            border: 1px solid #FFFFFF;
+            border: 1px solid $color-white;
             box-sizing: border-box;
             border-radius: 3px;
             font-family: Lato;
@@ -240,17 +239,26 @@
             font-weight: normal;
             font-size: 18px;
             line-height: 22px;
-            color: #272733;
+            color: $color-text-input;
             padding: 12px 10px;
 
             &::placeholder {
-                color: #272733;
+                color: $color-text-input;
             }
 
             &:focus {
                 background: rgba(61, 64, 80, 0.85);
                 border-color: $color-white;
                 color: $color-white;
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        input {
+            &:focus {
+                outline: none;
+                box-shadow: none;
             }
         }
 
@@ -309,7 +317,7 @@
 
                         &::-webkit-slider-thumb {
                             appearance: none;
-                            border: 1px solid #000000;
+                            border: 1px solid $color-black;
                             height: 24px;
                             width: 24px;
                             background: $color-primary;
@@ -320,7 +328,7 @@
 
                         &::-moz-range-thumb {
                             appearance: none;
-                            border: 1px solid #000000;
+                            border: 1px solid $color-black;
                             height: 24px;
                             width: 24px;
                             background: $color-primary;
@@ -346,6 +354,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        cursor: pointer;
 
                         &::before {
                             content: "";
@@ -354,6 +363,15 @@
                             width: 17px;
                             background: url("../images/icons/file.svg") no-repeat;
                             margin-right: 10px;
+                        }
+                        &:hover {
+                            border-color: $color-white;
+                            color: $color-white;
+                            background: $color-primary;
+
+                            &::before {
+                                background: url("../images/icons/file-white.svg") no-repeat;
+                            }
                         }
                     }
 
@@ -401,20 +419,13 @@
 
     @media screen and (min-width:960px) {
         &__steps {
-            justify-content: space-between;
             flex-direction: row;
             font-size: 16px;
             line-height: 19px;
             margin: 0 -12px 88px;
 
             .step {
-                flex-basis: 0;
-                flex-grow: 1;
-                padding: 0 15px;
-
                 &__circles {
-                    display: flex;
-                    position: absolute;
                     flex-direction: row;
                     top: 50px;
                     left: 100%;
@@ -424,14 +435,6 @@
         }
 
         &__form {
-            .selectric {
-                .button {
-                    background: transparent;
-                    height: 48px;
-                    width: 48px;
-                }
-            }
-
             .form {
                 &__row {
                     margin: 0;
