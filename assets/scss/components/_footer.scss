@@ -1,0 +1,208 @@
+.footer {
+    background: $color-gray;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &__content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+    }
+
+    &__item {
+        color: $color-light-gray;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        &.footer__list {
+            margin-bottom: 16px;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 1px;
+                background-color: $color-light-gray;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+            }
+
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                top: auto;
+            }
+        }
+
+        a:hover {
+            color: $color-primary;
+            transition: color 0, 2s ease;
+        }
+    }
+
+    &__text {
+        color: $color-white;
+        justify-content: flex-start;
+        width: 100%;
+        font-size: 11px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-right: 10px;
+        background-position: center;
+        background-size: contain;
+
+        &.qiwi {
+            background: url("../images/icons/qiwi.svg") no-repeat;
+        }
+
+        &.yandex-money {
+            background: url("../images/icons/yandex-money.svg") no-repeat;
+        }
+
+        &.web-money {
+            background: url("../images/icons/web-money.svg") no-repeat;
+        }
+
+        &.email {
+            background: url("../images/icons/envelope-blue.svg") no-repeat;
+        }
+
+        &.vk {
+            background: url("../images/icons/vk.svg") no-repeat;
+        }
+    }
+
+    @media screen and (min-width:940px) {
+        &__content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        &__block {
+            flex-direction: column;
+            justify-content: center;
+
+            &.footer__list {
+
+                &::before,
+                &::after {
+                    width: 1px;
+                    height: 100%;
+                    left: 0;
+                    bottom: 0;
+                    transform: none;
+                }
+
+                &::after {
+                    width: 1px;
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
+                    left: auto;
+                    transform: none;
+                }
+            }
+
+            &:nth-child(1) {
+                width: 30%;
+            }
+
+            &:nth-child(2) {
+                width: 40%;
+            }
+
+            &:nth-child(3) {
+                width: 30%;
+            }
+        }
+    }
+
+    @media screen and (min-width:1140px) {
+        &__content {
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        &__item {
+            margin: 0 19px 0;
+        }
+
+        &__block {
+            flex-direction: row;
+            justify-content: flex-start;
+
+            &:not(:first-child) {
+
+                &::before,
+                &::after {
+                    width: 1px;
+                    height: 18px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &:nth-child(1) {
+                width: 25%;
+            }
+
+            &:nth-child(2) {
+                width: 40%;
+            }
+
+            &:nth-child(3) {
+                width: 30%;
+            }
+
+            &.footer__list {
+                justify-content: center;
+            }
+
+            &.footer__links {
+                justify-content: space-between;
+
+                .footer__item:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__text {
+            width: 30%;
+        }
+    }
+}
